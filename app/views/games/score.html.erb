@@ -1,0 +1,12 @@
+<h1> Result </h1>
+
+
+<% if @result == 1 %>
+  <p>Sorry but <strong><%= @answer %></strong> can't be built out of <%= @generated_letters %></p>
+<% elsif @result == 2 %>
+  <p>Sorry but <strong><%= @answer %></strong> does not seem to be a valid English word...</p>
+<% else @result == 3 %>
+  <p><strong>Congratulations!</strong><%= @answer %> is a valid English word!</p>
+<% end %>
+
+<%= link_to 'Play again', new_path %>
